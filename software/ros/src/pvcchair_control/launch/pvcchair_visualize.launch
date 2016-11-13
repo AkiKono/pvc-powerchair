@@ -1,0 +1,10 @@
+<launch>
+
+  <!-- Load example URDF -->
+  <param name="robot_description" command="$(find xacro)/xacro.py '$(find pvcchair_description)/urdf/pvcchair.xacro'" />
+    
+  <!-- Show in Rviz  -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find pvcchair_description)/launch/pvcchair.rviz"/>
+
+</launch>
+
